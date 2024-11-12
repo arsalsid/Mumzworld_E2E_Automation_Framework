@@ -29,3 +29,6 @@ jobs:
         with:
           name: reports
           path: reports/extent-report.html
+
+      - name: List files in reports directory
+          run: ls -la reports
