@@ -19,13 +19,13 @@ jobs:
           distribution: 'adopt'
 
       # Add this step to setup Node.js 16
-        - name: Setup Node.js 16
-          uses: actions/setup-node@v3
-          with:
-            node-version: '16'
+      - name: Setup Node.js 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
 
-        - name: Verify Node.js version
-           run: node -v  # This will print the Node.js version being used
+      - name: Verify Node.js version
+        run: node -v  # This will print the Node.js version being used
 
       - name: Install dependencies
         run: mvn clean install
@@ -40,4 +40,4 @@ jobs:
           path: reports/extent-report.html
 
       - name: List files in reports directory
-          run: ls -la reports
+        run: ls -la reports
