@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Mumzworld.com Webstore E2E Automation Suite" parallel="none">
+<suite name="MumzWorld.com Website E2E Automation Suite" parallel="none">
     <listeners>
         <listener class-name="utils.listeners.Listener" />
     </listeners>

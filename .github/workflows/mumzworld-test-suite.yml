@@ -1,34 +1,31 @@
 name: MumzWorld Test Suite
- 
+
 on:
   push:
     branches:
-      - master # Trigger on any push to the main branch
- 
+      - master
+
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
-      # Checkout the code from the repository
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Setup Java
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
+          java-version: '19'
           distribution: 'adopt'
 
-      # Install dependencies
       - name: Install dependencies
         run: mvn clean install
- 
+
       - name: Run test suite
-        run: mvn -X -e test
- 
+        run: mvn test
+
       - name: Upload test report
         uses: actions/upload-artifact@v3
         with:
-          name: test-report
-          path: target/surefire-reports
+          name: reports
+          path: reports/extent-report.html
