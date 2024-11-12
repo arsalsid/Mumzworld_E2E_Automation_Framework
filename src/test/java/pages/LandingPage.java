@@ -12,11 +12,11 @@ public class LandingPage extends DriverFactory {
     public void verifyTitleOfPage(String expectedValue) {
         Utilities.AssertTitle(expectedValue);
     }
-    public void searchProduct() throws IOException {
+    public void searchProduct() throws Exception {
         String product = PropertyReader.getInstance().readProperty("searchProduct");
-        Utilities.enterText(LandingPageEnum.ENTER_SEARCH_PRODUCT.getLocator(), product);
+        Utilities.enterText(LandingPageEnum.ENTER_SEARCHED_PRODUCT.getLocator(), product);
         System.out.println("Searched Product :" +product);
-        Utilities.clickOnButton(LandingPageEnum.CLICK_ON_SEARCH_BTN.getLocator());
+        Utilities.clickOnButton(LandingPageEnum.CLICK_ON_SEARCHED_BTN.getLocator());
     }
 
 }

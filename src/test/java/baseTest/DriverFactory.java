@@ -47,15 +47,15 @@ public class DriverFactory {
         driver.get(url);
         Utilities.takeScreenshot(driver,"Initiating Website");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(100));
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+//        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(100));
         driver.manage().deleteAllCookies();
     }
 
-    @AfterClass
-    public void tearDown() {
-        Reporter.log("======Browser Closed======", true);
-        driver.quit();
-        driver = null;
-    }
+//    @AfterClass
+//    public void tearDown() {
+//        Reporter.log("======Browser Closed======", true);
+//        driver.quit();
+//        driver = null;
+//    }
 }

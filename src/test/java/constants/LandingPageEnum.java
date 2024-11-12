@@ -2,8 +2,8 @@ package constants;
 
 public enum LandingPageEnum {
 
-    ENTER_SEARCH_PRODUCT ("//input[@id='twotabsearchtextbox']"),
-    CLICK_ON_SEARCH_BTN ("//input[@id='nav-search-submit-button']"),
+    ENTER_SEARCHED_PRODUCT ("//input[@type='search']"),
+    CLICK_ON_SEARCHED_BTN ("//button[@id='search_btn']"),
 
 
     ;

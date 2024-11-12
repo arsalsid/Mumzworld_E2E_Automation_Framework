@@ -8,8 +8,8 @@ public class ExtentManager {
     public static final ExtentReports extentReports = new ExtentReports();
     public synchronized static ExtentReports createExtentReports() {
         ExtentSparkReporter reporter = new ExtentSparkReporter(System.getProperty("user.dir") + "//Reports//" + "//extent-report.html");
-        reporter.config().setDocumentTitle("NextGeni End To End Test Report");
-        reporter.config().setReportName("Amazon Test Extent Report");
+        reporter.config().setDocumentTitle("MumzWorld End To End Test Report");
+        reporter.config().setReportName("MumzWorld Test Execution Report");
         reporter.config().setTheme(Theme.DARK);
         reporter.config().setTimeStampFormat("dd.MM.yyyy, HH:mm:ss");
         extentReports.setSystemInfo("Author", "Muhammad Arsalan");
