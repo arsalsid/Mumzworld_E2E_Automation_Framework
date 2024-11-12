@@ -18,6 +18,8 @@ public class E2ETest extends DriverFactory {
     ProductDetailsPage productDetails = new ProductDetailsPage();
 
     ShoppingCartPage shoppingCart = new ShoppingCartPage();
+
+    //Landing Page
     @Test(description = "Verify Title of landingPage", priority = 1)
     public void verifyTitleOfLandingPage(Method method) throws Exception {
         startTest(method.getName(), "Verify Title of landingPage");
@@ -31,20 +33,19 @@ public class E2ETest extends DriverFactory {
         landingPage.searchProduct();
         Utilities.takeScreenshot(driver,"LandingPage");
     }
-
-//    @Test(description = "Verify Title of Product Page", priority = 3)
-//    public void verifyTitleOfProductPage(Method method) throws Exception {
-//        startTest(method.getName(), "Verify Title of ProductPage");
-//        productListingPage.verifyTitleOfProductPage("toys");
-//        Utilities.takeScreenshot(driver,"ProductPage");
-//    }
-//
-//    @Test(description = "Select Products of Product Listing Page", priority = 4)
-//    public void selectProductsOfProductListingPage(Method method) throws Exception {
-//        startTest(method.getName(), "Select Products of ProductListingPage");
-//        productListingPage.selectProductItem();
-//        Utilities.takeScreenshot(driver,"ProductListingPage");
-//    }
+    //Product Listing Page
+    @Test(description = "Verify Title of Product Listing Page", priority = 3)
+    public void verifyTitleOfProductPage(Method method) throws Exception {
+        startTest(method.getName(), "Verify Title of ProductPage");
+        productListingPage.verifyTitleOfProductPage("Little Angel - Baby Swing Chair - Grey - English Search");
+        Utilities.takeScreenshot(driver,"Product Listing Page");
+    }
+    @Test(description = "Select Products of Product Listing Page", priority = 4)
+    public void selectProductsOfProductListingPage(Method method) throws Exception {
+        startTest(method.getName(), "Select Products of ProductListingPage");
+        productListingPage.selectProductItem();
+        Utilities.takeScreenshot(driver,"ProductListingPage");
+    }
 //
 //    @Test(description = "Add to Cart Product Details Page", priority = 5)
 //    public void addToCartOnProductDetailsPage(Method method) throws Exception {

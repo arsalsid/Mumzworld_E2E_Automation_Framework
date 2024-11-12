@@ -2,8 +2,8 @@ package constants;
 
 public enum ProductListingPageEnum {
 
-    CLICK_ON_ITEM1("//span[text()='Fisher-Price Musical Toy, Rockin’ Record Player for Preschool Pretend Play for Kids Ages 3+ Year']"),
-    VALIDATE_PRICE_OF_ITEM1("//span[@class='a-color-base' and text()= '$26.73 delivery']"),
+    CLICK_ON_ITEM("//a[text()='Little Angel - Baby Swing Chair - Grey']"),
+    VALIDATE_PRICE_OF_ITEM("//span[@class='Price_integer__3ngZQ' and text()='38']"),
     ;
 
     public String desc;

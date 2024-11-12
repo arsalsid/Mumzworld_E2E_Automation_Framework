@@ -25,6 +25,7 @@ public class DriverFactory {
         String browser = PropertyReader.getInstance().readProperty("browser");
         ChromeOptions option = new ChromeOptions();
         option.addArguments("incognito");
+        option.addArguments("--headless");
 
         if (browser.equalsIgnoreCase("chrome")){
             driver = new ChromeDriver(option);

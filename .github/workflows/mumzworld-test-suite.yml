@@ -18,20 +18,31 @@ jobs:
           java-version: '19'
           distribution: 'adopt'
 
-      # Add this step to setup Node.js 16
-      - name: Setup Node.js 16
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '16'
 
       - name: Verify Node.js version
-        run: node -v  # This will print the Node.js version being used
+        run: node -v
 
       - name: Install dependencies
-        run: mvn clean install
+        run: mvn clean install -U
 
       - name: Run test suite
         run: mvn test
+
+      - name: List files in target directory
+        run: ls -la target/surefire-reports
+
+      - name: Upload Surefire test reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: surefire-reports
+          path: target/surefire-reports/*.xml
+
+      - name: List files in reports directory
+        run: ls -la reports
 
       - name: Upload test report
         uses: actions/upload-artifact@v3
@@ -39,12 +50,4 @@ jobs:
           name: reports
           path: reports/extent-report.html
 
-      - name: List files in reports directory
-        run: ls -la reports
-
-      - name: Upload Surefire test reports
-        uses: actions/upload-artifact@v3
-        with:
-          name: surefire-reports
-          path: target/surefire-reports/*.xml
 
