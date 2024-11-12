@@ -41,3 +41,10 @@ jobs:
 
       - name: List files in reports directory
         run: ls -la reports
+
+      - name: Upload Surefire test reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: surefire-reports
+          path: target/surefire-reports/*.xml
+
