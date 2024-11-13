@@ -1,6 +1,7 @@
 package utils;
 
 import baseTest.DriverFactory;
+import baseTest.PropertyReader;
 import org.openqa.selenium.*;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -142,9 +143,13 @@ public class Utilities extends DriverFactory {
     public static void incrementQuantity(String xpath){
 
         try {
+            int times = Integer.parseInt(PropertyReader.getInstance().readProperty("incrementQty"));
             waitForElementToBeClickable(xpath);
             WebElement incrementButton = driver.findElement(By.xpath(xpath));
-            incrementButton.click();
+            for (int i = 0; i < times; i ++) {
+                incrementButton.click();
+            }
+            System.out.println("Incremented quantity " + times + " times.");
         } catch (Exception e) {
             System.out.println("Error incrementing quantity: " +e.getMessage());
         }
@@ -153,11 +158,15 @@ public class Utilities extends DriverFactory {
     public static void decrementQuantity(String xpath) {
 
         try {
+            int times = Integer.parseInt(PropertyReader.getInstance().readProperty("decrementQty"));
             waitForElementToBeClickable(xpath);
             WebElement decrementQuantity = driver.findElement(By.xpath(xpath));
-            decrementQuantity.click();
+            for (int i = 0; i < times; i++) {
+                decrementQuantity.click();
+            }
+            System.out.println("Decremented quantity " + times + " times.");
         } catch (Exception e) {
-            System.out.println("Error decrementing quantity" +e.getMessage());
+            System.out.println("Error decrementing quantity:" +e.getMessage());
         }
     }
 }

@@ -5,72 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25f674a6-e275-46f6-9e2c-b432de869642" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/mumzworld-test-suite.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/mumzworld-test-suite.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/constants/UserRegisterationPageEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/UserRegisterationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenshots/Initiating Website.png" beforeDir="false" afterPath="$PROJECT_DIR$/Screenshots/Initiating Website.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenshots/LandingPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/Screenshots/LandingPage.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenshots/Product Listing Page.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Screenshots/ProductListingPage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/extent-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/extent-report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/baseTest/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseTest/DriverFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/baseTest/PropertyReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseTest/PropertyReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/constants/ProductDetailsPageEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/constants/ProductDetailsPageEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/constants/ShoppingCartPageEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/constants/ShoppingCartPageEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LandingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LandingPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProductDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProductDetailsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProductListingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProductListingPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/ShoppingCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ShoppingCartPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/E2ETest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/E2ETest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/utils/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/Utilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/extentReports/ExtentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/extentReports/ExtentManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/listeners/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/listeners/Listener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/Configuration/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Configuration/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-tests.E2ETest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/bullet_point.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/collapseall.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/failed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/jquery-3.6.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-tests.E2ETest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/navigator-bullet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/tests.E2ETest/Command line test.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/tests.E2ETest/classes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/tests.E2ETest/groups.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/tests.E2ETest/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/tests.E2ETest/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/tests.E2ETest/methods-alphabetical.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/tests.E2ETest/methods-not-run.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/tests.E2ETest/methods.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/tests.E2ETest/reporter-output.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/tests.E2ETest/testng.xml.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/tests.E2ETest/toc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/passed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/skipped.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-reports.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-reports.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-reports1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-reports2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/tests.E2ETest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/tests.E2ETest/Command line test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/tests.E2ETest/Command line test.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Configuration/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Configuration/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/Google.com Website E2E Automation Suite/Akirolabs GmbH.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/Google.com Website E2E Automation Suite/Akirolabs GmbH.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Google.com Website E2E Automation Suite/classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Google.com Website E2E Automation Suite/classes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Google.com Website E2E Automation Suite/methods-alphabetical.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Google.com Website E2E Automation Suite/methods-alphabetical.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Google.com Website E2E Automation Suite/methods.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Google.com Website E2E Automation Suite/methods.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webTestNG.xml" beforeDir="false" afterPath="$PROJECT_DIR$/webTestNG.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

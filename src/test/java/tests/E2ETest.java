@@ -2,10 +2,7 @@ package tests;
 
 import baseTest.DriverFactory;
 import org.testng.annotations.Test;
-import pages.LandingPage;
-import pages.ProductDetailsPage;
-import pages.ProductListingPage;
-import pages.ShoppingCartPage;
+import pages.*;
 import utils.Utilities;
 import java.lang.reflect.Method;
 import static utils.extentReports.ExtentTestManager.startTest;
@@ -18,6 +15,8 @@ public class E2ETest extends DriverFactory {
     ProductDetailsPage productDetails = new ProductDetailsPage();
 
     ShoppingCartPage shoppingCart = new ShoppingCartPage();
+
+    UserRegisterationPage userRegister = new UserRegisterationPage();
 
     //Landing Page
     @Test(description = "Verify Title of landingPage", priority = 1)
@@ -57,14 +56,27 @@ public class E2ETest extends DriverFactory {
     @Test(description = "Verify Title of Shopping Cart Page", priority = 6)
     public void verifyTitleOfShoppingCartPage(Method method) throws Exception {
         startTest(method.getName(), "Verify Title of Shopping Cart Page");
-        shoppingCart.verifyTitleOfPage("Amazon.com Shopping Cart");
+        shoppingCart.verifyTitleOfPage("Cart - English");
         Utilities.takeScreenshot(driver,"Shopping Cart Page");
     }
-    @Test(description = "Get SubTotal Price Of Shopping Cart Product", priority = 7)
-    public void getSubTotalPriceOfProduct(Method method) throws Exception {
-        startTest(method.getName(), "Verify Subtotal Page of Shopping Cart Page");
-        shoppingCart.shoppingCart();
+    @Test(description = "Check Out Of Shopping Cart Product", priority = 7)
+    public void shoppingCart(Method method) throws Exception {
+        startTest(method.getName(), "Check Out Of Shopping Cart");
+        shoppingCart.checkOut();
         Utilities.takeScreenshot(driver,"Shopping Cart Page");
+    }
+
+    @Test(description = "Verify Title of Register User Page", priority = 6)
+    public void verifyTitleOfRegisterUserPage(Method method) throws Exception {
+        startTest(method.getName(), "Verify Title of Register User Page");
+        userRegister.verifyTitleOfPage("Create account - English");
+        Utilities.takeScreenshot(driver,"Register User Page");
+    }
+    @Test(description = "New User Registeration", priority = 7)
+    public void userRegisteration(Method method) throws Exception {
+        startTest(method.getName(), "Verify New user Registeration");
+        userRegister.registerNewUser();
+        Utilities.takeScreenshot(driver,"Registeration  Page");
     }
 
 

@@ -3,8 +3,9 @@ package constants;
 public enum ShoppingCartPageEnum {
 
     VALIDATE_SHOPPING_CART ("//h1[text()='Cart']"),
-    ENTER_SEARCH_PRODUCT ("//input[@id='twotabsearchtextbox']"),
-    CLICK_ON_SEARCH_BTN ("//input[@id='nav-search-submit-button']"),
+    INCREASE_QTY_BTN("//button[@id='increase_button']"),
+    DECREASE_QTY_BTN("//button[@id='decrease_button']"),
+    CLICK_ON_PROCEED_TO_CHECKOUT_BTN("//button[text()='Proceed to Checkout']"),
 
 
 
