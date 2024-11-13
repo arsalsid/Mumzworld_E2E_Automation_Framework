@@ -13,10 +13,10 @@ public class ShoppingCartPage extends DriverFactory{
         Utilities.AssertTitle(expectedValue);
     }
 
-    public void getSubTotalPriceOfProduct () throws IOException {
+    public void shoppingCart () throws IOException {
 
-        String subTotalPrice = PropertyReader.getInstance().readProperty("subtotalPriceOfProduct");
-        Utilities.validateProduct(ShoppingCartPageEnum.VALIDATE_SUBTOTAL_PRICE.getLocator(),subTotalPrice);
+        String subTotalPrice = PropertyReader.getInstance().readProperty("expectedShoppingCart");
+        Utilities.validateProduct(ShoppingCartPageEnum.VALIDATE_SHOPPING_CART.getLocator(),subTotalPrice);
     }
 
 

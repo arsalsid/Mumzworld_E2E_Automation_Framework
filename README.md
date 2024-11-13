@@ -9,7 +9,7 @@ The tests follow Page Object Model Design pattern with Extent reporting. Moreove
 
 * Java (JDK 19) used as a Programming Language.
 * Selenium 4 used for Web UI automation
-* TestNG Framework: Used for Test case priority and execution of testcases
+* TestNG Framework: Used for tests.Test case priority and execution of testcases
 * Design Pattern: Page Object Model(POM)
 * Extent Report: Used as a Reporting
 * Maven: Used as a Build Management tool

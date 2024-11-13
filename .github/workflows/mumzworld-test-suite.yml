@@ -1,4 +1,4 @@
-name: MumzWorld Test Suite
+name: MumzWorld tests.Test Suite
 
 on:
   push:

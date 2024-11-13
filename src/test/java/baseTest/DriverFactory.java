@@ -9,7 +9,6 @@ import org.testng.Reporter;
 import org.testng.annotations.*;
 import utils.Utilities;
 import java.io.IOException;
-import java.time.Duration;
 import java.util.logging.Logger;
 
 public class DriverFactory {
@@ -17,18 +16,18 @@ public class DriverFactory {
 
     @BeforeTest
     public void beforeTest() {
-      Logger.getLogger("Before Test logs");
+      Logger.getLogger("Before tests.Test logs");
     }
 
     @BeforeClass
     public void launchBrowser() throws IOException, InterruptedException {
         String browser = PropertyReader.getInstance().readProperty("browser");
-        ChromeOptions option = new ChromeOptions();
-        option.addArguments("incognito");
-        option.addArguments("--headless");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("incognito");
+        //options.addArguments("--headless");
 
         if (browser.equalsIgnoreCase("chrome")){
-            driver = new ChromeDriver(option);
+            driver = new ChromeDriver(options);
         }
         else if (browser.equalsIgnoreCase("firefox")){
             driver = new FirefoxDriver();

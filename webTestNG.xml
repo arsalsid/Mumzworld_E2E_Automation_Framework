@@ -9,5 +9,5 @@
         <classes>
             <class name="tests.E2ETest"/>
         </classes>
-    </test> <!-- Test -->
+    </test> <!-- tests.Test -->
 </suite> <!--Suite -->

@@ -11,7 +11,6 @@ import org.testng.ITestResult;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.List;
 
 public class Utilities extends DriverFactory {
 
@@ -46,7 +45,7 @@ public class Utilities extends DriverFactory {
         try {
             waitForElementToBeClickable(xpath);
             driver.findElement(By.xpath(xpath)).click();
-        }catch (NoSuchElementException e){
+        } catch (NoSuchElementException e){
             System.out.println("Unable to click element with the given element Locator" + xpath);
         }
     }
@@ -138,5 +137,27 @@ public class Utilities extends DriverFactory {
     public static void scrollDown(WebDriver driver, int pixels) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0," + pixels + ");");
+    }
+
+    public static void incrementQuantity(String xpath){
+
+        try {
+            waitForElementToBeClickable(xpath);
+            WebElement incrementButton = driver.findElement(By.xpath(xpath));
+            incrementButton.click();
+        } catch (Exception e) {
+            System.out.println("Error incrementing quantity: " +e.getMessage());
+        }
+    }
+
+    public static void decrementQuantity(String xpath) {
+
+        try {
+            waitForElementToBeClickable(xpath);
+            WebElement decrementQuantity = driver.findElement(By.xpath(xpath));
+            decrementQuantity.click();
+        } catch (Exception e) {
+            System.out.println("Error decrementing quantity" +e.getMessage());
+        }
     }
 }

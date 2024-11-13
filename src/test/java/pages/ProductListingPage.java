@@ -15,9 +15,10 @@ public class ProductListingPage extends DriverFactory {
 
     public void selectProductItem() throws IOException {
         String item = PropertyReader.getInstance().readProperty("selectProduct");
+        System.out.println("Product Item Name: " +item);
         String getExpectedResult = PropertyReader.getInstance().readProperty("expectedProductPrice");
         Utilities.validateText(ProductListingPageEnum.VALIDATE_PRICE_OF_ITEM.getLocator(), getExpectedResult);
-        System.out.println("Product Item Name: " +item);
+
         Utilities.toBeClickOnButton(ProductListingPageEnum.CLICK_ON_ITEM.getLocator());
     }
 }

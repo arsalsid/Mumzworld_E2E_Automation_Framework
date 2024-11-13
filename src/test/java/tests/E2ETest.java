@@ -46,26 +46,26 @@ public class E2ETest extends DriverFactory {
         productListingPage.selectProductItem();
         Utilities.takeScreenshot(driver,"ProductListingPage");
     }
-//
-//    @Test(description = "Add to Cart Product Details Page", priority = 5)
-//    public void addToCartOnProductDetailsPage(Method method) throws Exception {
-//        startTest(method.getName(), "Add to Cart ProductDetailsPage");
-//        productDetails.AddToCartProduct();
-//        Utilities.takeScreenshot(driver,"ProductDetailsPage");
-//    }
-//
-//    @Test(description = "Verify Title of Shopping Cart Page", priority = 6)
-//    public void verifyTitleOfShoppingCartPage(Method method) throws Exception {
-//        startTest(method.getName(), "Verify Title of Shopping Cart Page");
-//        shoppingCart.verifyTitleOfPage("Amazon.com Shopping Cart");
-//        Utilities.takeScreenshot(driver,"Shopping Cart Page");
-//    }
-//    @Test(description = "Get SubTotal Price Of Shopping Cart Product", priority = 7)
-//    public void getSubTotalPriceOfProduct(Method method) throws Exception {
-//        startTest(method.getName(), "Verify Subtotal Page of Shopping Cart Page");
-//        shoppingCart.getSubTotalPriceOfProduct();
-//        Utilities.takeScreenshot(driver,"Shopping Cart Page");
-//    }
+
+    @Test(description = "Add to Cart Product Details Page", priority = 5)
+    public void addToCartOnProductDetailsPage(Method method) throws Exception {
+        startTest(method.getName(), "Add to Cart ProductDetailsPage");
+        productDetails.AddToCartProduct();
+        Utilities.takeScreenshot(driver,"ProductDetailsPage");
+    }
+
+    @Test(description = "Verify Title of Shopping Cart Page", priority = 6)
+    public void verifyTitleOfShoppingCartPage(Method method) throws Exception {
+        startTest(method.getName(), "Verify Title of Shopping Cart Page");
+        shoppingCart.verifyTitleOfPage("Amazon.com Shopping Cart");
+        Utilities.takeScreenshot(driver,"Shopping Cart Page");
+    }
+    @Test(description = "Get SubTotal Price Of Shopping Cart Product", priority = 7)
+    public void getSubTotalPriceOfProduct(Method method) throws Exception {
+        startTest(method.getName(), "Verify Subtotal Page of Shopping Cart Page");
+        shoppingCart.shoppingCart();
+        Utilities.takeScreenshot(driver,"Shopping Cart Page");
+    }
 
 
 

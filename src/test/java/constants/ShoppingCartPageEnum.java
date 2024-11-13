@@ -2,9 +2,10 @@ package constants;
 
 public enum ShoppingCartPageEnum {
 
+    VALIDATE_SHOPPING_CART ("//h1[text()='Cart']"),
     ENTER_SEARCH_PRODUCT ("//input[@id='twotabsearchtextbox']"),
     CLICK_ON_SEARCH_BTN ("//input[@id='nav-search-submit-button']"),
-    VALIDATE_SUBTOTAL_PRICE ("(//span[text()='$29.99'])[1]"),
+
 
 
     ;

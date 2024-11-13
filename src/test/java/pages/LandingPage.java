@@ -5,8 +5,6 @@ import baseTest.PropertyReader;
 import constants.LandingPageEnum;
 import utils.Utilities;
 
-import java.io.IOException;
-
 public class LandingPage extends DriverFactory {
 
     public void verifyTitleOfPage(String expectedValue) {
