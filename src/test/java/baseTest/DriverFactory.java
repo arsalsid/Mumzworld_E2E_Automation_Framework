@@ -1,5 +1,6 @@
 package baseTest;
 
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -24,7 +25,8 @@ public class DriverFactory {
         String browser = PropertyReader.getInstance().readProperty("browser");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("incognito");
-        //options.addArguments("--headless");
+//        options.addArguments("--headless");
+        options.setPageLoadStrategy(PageLoadStrategy.EAGER);
 
         if (browser.equalsIgnoreCase("chrome")){
             driver = new ChromeDriver(options);

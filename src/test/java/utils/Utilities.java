@@ -5,6 +5,7 @@ import baseTest.PropertyReader;
 import org.openqa.selenium.*;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestContext;
@@ -12,6 +13,7 @@ import org.testng.ITestResult;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.function.Function;
 
 public class Utilities extends DriverFactory {
 
@@ -33,6 +35,7 @@ public class Utilities extends DriverFactory {
     }
     public static void enterText(String xpath,String input){
         try{
+            waitForPageLoad(driver,60,500);
           WebElement element = driver.findElement(By.xpath(xpath));
             waitForVisibility(element);
             input = input.trim().toLowerCase();
@@ -44,6 +47,7 @@ public class Utilities extends DriverFactory {
     }
     public static void toBeClickOnButton(String xpath){
         try {
+            waitForPageLoad(driver,60,500);
             waitForElementToBeClickable(xpath);
             driver.findElement(By.xpath(xpath)).click();
         } catch (NoSuchElementException e){
@@ -52,6 +56,7 @@ public class Utilities extends DriverFactory {
     }
     public static void clickOnButton(String xpath){
         try {
+            waitForPageLoad(driver,60,500);
             waitForClickable(driver.findElement(By.xpath(xpath)));
             driver.findElement(By.xpath(xpath)).click();
         }catch (NoSuchElementException e){
@@ -143,6 +148,7 @@ public class Utilities extends DriverFactory {
     public static void incrementQuantity(String xpath){
 
         try {
+            waitForPageLoad(driver,60,500);
             int times = Integer.parseInt(PropertyReader.getInstance().readProperty("incrementQty"));
             waitForElementToBeClickable(xpath);
             WebElement incrementButton = driver.findElement(By.xpath(xpath));
@@ -158,6 +164,7 @@ public class Utilities extends DriverFactory {
     public static void decrementQuantity(String xpath) {
 
         try {
+            waitForPageLoad(driver,60,500);
             int times = Integer.parseInt(PropertyReader.getInstance().readProperty("decrementQty"));
             waitForElementToBeClickable(xpath);
             WebElement decrementQuantity = driver.findElement(By.xpath(xpath));
@@ -168,5 +175,19 @@ public class Utilities extends DriverFactory {
         } catch (Exception e) {
             System.out.println("Error decrementing quantity:" +e.getMessage());
         }
+    }
+
+    public static void waitForPageLoad(WebDriver driver, long timeoutIntSeconds, long pollingInMillis) {
+        new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(timeoutIntSeconds))
+                .pollingEvery(Duration.ofMillis(pollingInMillis))
+                .until(new Function<WebDriver, Boolean>() {
+            @Override
+            public Boolean apply(WebDriver driver) {
+                return ((JavascriptExecutor)driver)
+                        .executeScript("return document.readyState")
+                        .equals("complete");
+            }
+        });
     }
 }
