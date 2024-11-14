@@ -14,6 +14,7 @@ The tests follow Page Object Model Design pattern with Extent reporting. Moreove
 * Extent Report: Used as a Reporting
 * Maven: Used as a Build Management tool
 * GitHub: Used as a version control
+* GitHub Actions: Used for CI/CD integration right from GitHub repository 
 
 
 # Prerequisites for Windows and Mac OS
